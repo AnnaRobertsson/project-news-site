@@ -1,0 +1,257 @@
+html {
+  background: #f1e7d9;
+  color: black;
+}
+/* *, body, a and li is styled like this to reset default values to make it easier to style the navbar*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; /*Added border according to Technigo-video about CSS reset*/
+  box-sizing: border-box; /*is this the one messing up the borders??*/
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  /*Here I can remove the color?*/
+  color: #0389bb;
+}
+
+/*Add styling of logo incl. it's size?? Why doesn't it seem to be neecessary when I removed style 125 px in html?? Fit-content??*/
+/*Should the site-name styling be here instead??*/
+
+
+.nav-links a {
+  color: #0389bb;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /*Why not font-size here??*/
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 24px;
+}
+
+.menu li:hover {
+  background-color: #f1e7d9;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+/*Is it possible to combine .news and .about??*/
+.news {
+  position: relative;
+}
+
+.about {
+  position: relative;
+}
+
+.dropdown {
+  background-color: white;
+  padding: 1em 0;
+  position: absolute;
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: black;
+}
+/*Is it possible to combine .news and .about??*/
+.news:hover .dropdown {
+  display: block;
+}
+
+.about:hover .dropdown {
+  display: block;
+}
+
+h1 {
+  color: #ff914d;
+}
+
+h3 {
+  color: #ff914d;
+}
+
+/*Set the font-size of h1 and h3, but site-name shouldn't change with the h1, tried to use CSS specificity*/
+/*Why does the site name turn black if it's after the h1?*/
+.site-name { /*Should it be #site-name??*/
+  color: #ff914d;
+  font-size: 44px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-variant: small-caps;
+  /*Remove font-variant: small-caps??*/
+  /*How do I get the title closer to the logo??*/
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+.sign-up-newsletter {
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1em;
+}
+
+/*grid??*/
+.big-news-item {
+  display: grid;
+  background-color: white;
+  border: 2px solid #5d961c;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+.big-news-item img {
+  display: block;
+  max-width: 100%;
+}
+
+.big-news-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/*grid?? Add box-shadow?? T.ex. "box-shadow: 5px 5px 10px #5c5b5b"*/
+.small-news-item {
+  display: grid; /*REMOVE?*/
+  background-color: white;
+  border: 2px solid #5d961c;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+.small-news-item img {
+  display: block;
+  max-width: 100%;
+}
+
+@media (max-width: 667px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: #f1e7d9;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+.dropdown li:hover {
+  background-color: black;
+  }
+}
+
+@media (min-width: 668px) and (max-width: 1023px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .big-news-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-end: span 2;
+  }
+
+  .big-news-item img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .big-news-text {
+    padding-left: 20px;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .big-news-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-end: span 4;
+  }
+
+  .big-news-item img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .big-news-text {
+    padding-left: 20px;
+    justify-content: flex-end;
+  }
+}
