@@ -25,12 +25,13 @@ li {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-around;
   padding: 10px;
   height: 100px;
   background-color: white;
   /*Here I can remove the color?*/
   color: #0389bb;
+  box-shadow: 1px 1px 3px #0389bb;
 }
 
 .logo img {
@@ -89,7 +90,7 @@ li {
 }
 
 .dropdown li:hover {
-  background-color: #1d4355;
+  background-color: white;
 }
 /*Is it possible to combine .news and .about??*/
 .news:hover .dropdown {
@@ -101,7 +102,7 @@ li {
 }
 /*Is it possible to combine h1 and h3*/
 h1 {
-  color: #ff914d;
+  color: #5d961c;
 }
 
 h3 {
@@ -111,11 +112,10 @@ h3 {
 /*Set the font-size of h1 and h3, but site-name shouldn't change with the h1, tried to use CSS specificity*/
 /*Why does the site name turn black if it's after the h1?*/
 .site-name { /*Should it be #site-name??*/
-  color: #5d961c;
+  color: #5d961c; /*REMOVE since it doesn't work?*/
   font-size: 32px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-variant: small-caps;
-  /*Remove font-variant: small-caps??*/
   /*How do I get the title closer to the logo??*/
 }
 
@@ -144,7 +144,6 @@ input[type=checkbox] {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/*grid??*/
 .big-news-item {
   display: grid;
   grid-column: 1 / span 4;
@@ -165,9 +164,12 @@ input[type=checkbox] {
   flex-direction: column;
 }
 
-/*grid??*/
+.big-news-text h1 {
+  color: #ff914d;
+}
+
 .small-news-item {
-  display: grid; /*REMOVE?*/
+  display: grid;
   grid-column: 1 / span 4;
   background-color: white;
   border: 2px solid #5d961c;
@@ -179,6 +181,18 @@ input[type=checkbox] {
 .small-news-item img {
   display: block;
   max-width: 100%;
+}
+
+footer {
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  box-shadow: 1px -1px 3px #0389bb;
+}
+
+footer a:link, a:visited {
+  color: blue
 }
 
 @media (max-width: 667px) {
@@ -299,9 +313,14 @@ input[type=checkbox] {
   .big-news-text {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-evenly;
     padding-left: 15px;
     font-size: 24px;
+  }
+
+  .big-news-text h1 {
+    font-size: 42px;
   }
 
   .small-news-item {
