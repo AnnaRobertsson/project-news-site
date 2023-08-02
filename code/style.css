@@ -1,6 +1,5 @@
 html {
   background: #f1e7d9;
-  color: black;
 }
 /* *, body, a and li is styled like this to reset default values to make it easier to style the navbar*/
 
@@ -256,7 +255,6 @@ input[type=checkbox] {
   }
 
   .big-news-text {
-    padding-left: 20px;
     justify-content: flex-end;
   }
 
@@ -290,16 +288,20 @@ input[type=checkbox] {
 
   .big-news-item {
     grid-column: 1 / span 12;
+    display: flex;
   }
 
   .big-news-item img {
     display: block;
-    max-width: 50%;
+    max-width: 35%;
   }
 
   .big-news-text {
-    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-end;
+    padding-left: 15px;
+    font-size: 24px;
   }
 
   .small-news-item {
