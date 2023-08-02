@@ -70,7 +70,7 @@ li {
 }
 
 .dropdown {
-  background-color: white;
+  background-color: #1d4355;
   padding: 1em 0;
   position: absolute;
   display: none;
@@ -89,7 +89,7 @@ li {
 }
 
 .dropdown li:hover {
-  background-color: black;
+  background-color: #1d4355;
 }
 /*Is it possible to combine .news and .about??*/
 .news:hover .dropdown {
@@ -105,13 +105,13 @@ h1 {
 }
 
 h3 {
-  color: #ff914d;
+  color: #0389bb;
 }
 
 /*Set the font-size of h1 and h3, but site-name shouldn't change with the h1, tried to use CSS specificity*/
 /*Why does the site name turn black if it's after the h1?*/
 .site-name { /*Should it be #site-name??*/
-  color: #ff914d;
+  color: #5d961c;
   font-size: 32px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-variant: small-caps;
