@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Should we have html lang="en"> here? or under <html> ??-->
+<!--Should we have html lang="en"> here? or under <html> ?? <html lang="en">-->
 <html>
   <head>
     <meta charset="utf-8" />
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style.css" />
     <!-- dont forget the meta tag for responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/0d7318cbbe.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -24,30 +25,31 @@
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
           <div class="menu">
-            <li><a href="home">Home</a></li>
-            <li class="news">
-              <a href="news">News</a>
+            <li><i class="fa-solid fa-house" style="color: #ff914d;"></i><a href="home"> Home</a></li>
+            <li class="news"><i class="fa-regular fa-newspaper" style="color: #ff914d;"></i>
+              <a href="news"> News</a>
               <ul class="dropdown">
                 <li><a href="latest news">Latest news</a></li>
                 <li><a href="archive">Search in our archive</a></li>
               </ul>
             </li>
             <li class="about">
-              <a href="about">About</a>
+              <i class="fa-solid fa-briefcase" style="color: #ff914d;"></i>
+              <a href="about"> About</a>
               <ul class="dropdown">
                 <li><a href="start">How it all started</a></li>
                 <li><a href="vision">Our vision</a></li>
                 <li><a href="staff">Meet the staff</a></li>
               </ul>
             </li>
-            <li><a href="contact">Contact</a></li>
+            <li><i class="fa-regular fa-address-card" style="color: #ff914d;"></i><a href="contact"> Contact</a></li>
           </div>
         </ul>
       </nav>
     </header>
 
     <div class="subscribe-newsletter">
-      <p>We provide the latest news about eye health! Subscribe to our free newsletter <a href="https://www.google.com/" target="_blank" title="Sign up!">here</a> to always stay updated!</p>
+      <p>We provide the latest news about eye health! Subscribe to our free newsletter <a href="https://www.google.com/" target="_blank" title="Sign up!">here</a> to always stay updated! <i class="fa-solid fa-glasses"></i></p>
     </div>
 
     <section class="grid-container">
@@ -60,7 +62,6 @@
         </div> 
       </article>
       <!-- The other news  -->
-      <!--Should every new article be created under a new article tag? Should they then be called something about the specific article and small news so you can code all the small news the same?-->
       <div class="articles">
         <article>
           <img src="./images/the-visionary-sunglasses.jpg" alt="picture of sunglasses">
@@ -123,8 +124,10 @@
 
     <footer>
       <p>Anna Robertsson, 2023 | Web Development student at Technigo</p><br>
-      <address>
-        Visit <a href="https://www.linkedin.com/in/anna-robertsson-829967272/" target="_blank" title="Anna's LinkedIn">LinkedIn</a>, <a href="https://github.com/AnnaRobertsson" target="_blank" title="Anna's GitHub">GitHub</a> or send Anna an <a href="mailto:robertsson_anna@hotmail.com" target="_blank" title="Anna's e-mail">e-mail </a><span>&#9993;</span>
+      <address class>
+        <a href="https://www.linkedin.com/in/anna-robertsson-829967272/" target="_blank" title="Anna's LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/AnnaRobertsson" target="_blank" title="Anna's GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:robertsson_anna@hotmail.com" target="_blank" title="Anna's e-mail"><i class="fa-solid fa-envelope"></i></a>
       </address>
     </footer>
   </body>
