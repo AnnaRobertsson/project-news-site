@@ -1,5 +1,6 @@
 # News Site
 To get accustomed to HTML and CSS, our first assignment was to build a news site of a topic of our choice. The site needed to have a header, a main news article, a grid of news articles, arranged using Flexbox and Grid, styled and with a responsive design.
+I have a background as an ophthalmic nurse, therefore I chose a news site about eye health.
 
 ## The problem
 *Coming later*
