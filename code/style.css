@@ -25,8 +25,9 @@ html {
 .navbar {
   display: flex;
   width: 100%;
+  height: 50px;
   align-items: center;
-  background: white;
+  background: #ffffff;
   justify-content:space-around;
   box-shadow: 1px 1px 3px #0389bb;
   position: fixed; 
@@ -34,7 +35,7 @@ html {
 }
 
 .logo img {
-  height: 80px;
+  height: 50px;
 }
 /*Fit-content??*/
 /*Should the site-name styling be here instead??*/
@@ -89,7 +90,7 @@ html {
 }
 
 .dropdown li:hover {
-  background-color: white;
+  background-color: #ffffff;
 }
 /*Is it possible to combine .news and .about??*/
 .news:hover .dropdown {
@@ -99,7 +100,7 @@ html {
 .about:hover .dropdown {
   display: block;
 }
-/*Is it possible to combine h1 and h3 (if I choose the same color)*/
+
 h1 {
   color: #0389bb;
 }
@@ -110,7 +111,7 @@ h3 {
 
 .site-name h1 {
   color: #5d961c;
-  font-size: 44px;
+  font-size: 36px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-variant: small-caps;
   /*How do I get the title closer to the logo??*/
@@ -128,26 +129,25 @@ input[type=checkbox] {
 }
 
 .subscribe-newsletter {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
-  padding: 2em;
-  margin-top: 84px;
+  padding: 1em;
+  margin-top: 50px;
 }
 
 .grid-container {
-  padding: 0 8em 4em;
+  padding: 0 2em 4em;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #ffffff;
   border: 2px #5d961c solid;
   box-shadow: 5px 5px 10px #5c5b5b;
   padding: 0.5em;
   margin-bottom: 2em;
-  
 }
 
 .hero img {
@@ -157,10 +157,11 @@ input[type=checkbox] {
 
 .hero .content {
   padding: 1em;
+  text-align: justify;
 }
 
 .hero .content h1 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .hero .content p {
@@ -174,7 +175,7 @@ input[type=checkbox] {
 }
 
 .articles article {
-  background: white;
+  background: #ffffff;
   border: 2px #5d961c solid;
   box-shadow: 5px 5px 10px #5c5b5b;
   padding: 0.5em;
@@ -187,17 +188,22 @@ input[type=checkbox] {
 }
 
 .articles article .content {
-width: 100%;
-padding: 1em;
+  width: 100%;
+  padding: 1em;
+  text-align: justify;
 }
 
 footer {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #ffffff;
   text-align: center;
   padding: 10px;
   box-shadow: 1px -1px 3px #0389bb;
+}
+
+.copyright img {
+  width: 30px;
 }
 
 footer a:link, a:visited {
@@ -241,29 +247,29 @@ footer a:link, a:visited {
   }
 
   .dropdown li:hover {
-    background-color: white;
+    background-color: #ffffff;
   }
 }
 
 @media (min-width: 668px) and (max-width: 1023px) {
   .navbar {
-    height: 110px;
+    height: 70px;
   }
   
   .logo img {
-    height: 90px;
+    height: 60px;
   }
   
   .menu {
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .site-name {
-    font-size: 28px;
+    font-size: 22px;
   }
   
   .subscribe-newsletter {
-    margin-top: 110px;
+    margin-top: 70px;
   }
 
   .hero {
@@ -272,6 +278,14 @@ footer a:link, a:visited {
 
   .hero img {
     width: 40%; /*Behöver man sätta max-width här med eller gäller den från mobilefirstläget? Varför komprimeras bilden i just tabletläge??*/
+  }
+
+  .hero .content h1 {
+    font-size: 1.5em;
+  }
+  
+  .hero .content p {
+    font-size: 1em;
   }
 
   .articles {
@@ -298,6 +312,12 @@ footer a:link, a:visited {
   
   .subscribe-newsletter {
     margin-top: 120px;
+    padding: 2em;
+    font-size: 20px;
+  }
+
+  .grid-container {
+    padding: 0 8em 4em;
   }
 
   .hero {
@@ -306,6 +326,14 @@ footer a:link, a:visited {
 
   .hero img {
     width: 40%; /*Behöver man sätta max-width här med eller gäller den från mobilefirstläget?*/
+  }
+
+  .hero .content h1 {
+    font-size: 2em;
+  }
+  
+  .hero .content p {
+    font-size: 1.5em;
   }
 
   .articles {
