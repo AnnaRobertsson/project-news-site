@@ -23,15 +23,15 @@ html {
 
 .navbar {
   display: flex;
-  z-index: 2;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 50px;
-  align-items: center;
-  background: #ffffff;
-  justify-content:space-around;
-  box-shadow: 1px 1px 3px #0389bb;
   position: fixed; 
   top: 0;
+  z-index: 2;
+  background: #ffffff;
+  box-shadow: 1px 1px 3px #0389bb;
 }
 
 .logo img {
@@ -39,24 +39,23 @@ html {
 }
 
 .site-name h1 {
-  color: #5d961c;
-  font-size: 36px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-variant: small-caps;
-  /*How do I get the title closer to the logo??*/
+  font-size: 36px;
+  color: #5d961c;
 }
 
 .nav-links a {
-  color: #ff914d;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #ff914d;
 }
 
 .menu {
   display: none;
   position: absolute;
-  background-color: #ffffff;
   right: 0;
   left: 0;
+  background-color: #ffffff;
   font-size: 18px;
   text-align: center;
   padding: 16px 0;
@@ -64,10 +63,10 @@ html {
 
 .menu li:hover {
   display: inline-block;
+  z-index: 1;
   background-color: #f1e7d9;
   border-radius: 5px;
   transition: 0.3s ease;
-  z-index: 1;
 }
 
 .menu li {
@@ -83,14 +82,14 @@ html {
 }
 
 .dropdown {
-  background-color: #1d4355;
-  padding: 1em 0;
-  position: absolute;
   display: none;
+  position: absolute;
   border-radius: 8px;
   left: 40%;
   top: -22px;
   transform: translateX(35%);
+  background-color: #1d4355;
+  padding: 1em 0;
 }
 
 .dropdown li + li {
@@ -98,9 +97,9 @@ html {
 }
 
 .dropdown li {
-  padding: 0.5em 1em;
   width: 8em;
   text-align: center;
+  padding: 0.5em 1em;
 }
 
 .dropdown li:hover {
@@ -127,9 +126,9 @@ input[type=checkbox]:checked ~ .menu {
 }
 
 .subscribe-newsletter {
-  font-size: 16px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
   padding: 1em;
   margin-top: 50px;
 }
@@ -151,25 +150,25 @@ h3 {
   flex-direction: column;
   background: #ffffff;
   border: 2px #5d961c solid;
-  box-shadow: 5px 5px 10px #5c5b5b;
   padding: 0.5em;
   margin-bottom: 2em;
+  box-shadow: 5px 5px 10px #5c5b5b;
 }
 
 .hero:hover, .articles article:hover {
   cursor: pointer;
   opacity: 0.5;
-  background-color: #bfbfbd;
+  background-color: #ffffff;
 }
 
 .hero img {
   max-width: 100%;
-  height: auto; /*change?*/
+  height: auto;
 }
 
 .hero .content {
-  padding: 1em;
   text-align: justify;
+  padding: 1em;
 }
 
 .hero .content h1 {
@@ -189,20 +188,20 @@ h3 {
 .articles article {
   background: #ffffff;
   border: 2px #5d961c solid;
-  box-shadow: 5px 5px 10px #5c5b5b;
   padding: 0.5em;
+  box-shadow: 5px 5px 10px #5c5b5b;
 }
 
 .articles article img {
   width: 100%;
   max-width: 100%;
-  height: auto; /*change?*/
+  height: auto;
 }
 
 .articles article .content {
+  text-align: justify;
   width: 100%;
   padding: 1em;
-  text-align: justify;
 }
 
 footer {
@@ -219,8 +218,8 @@ footer {
 }
 
 footer a:link, a:visited {
-  color: #5d961c;
   font-size: 30px;
+  color: #5d961c;
 }
 
 @media (min-width: 668px) and (max-width: 1023px) {
@@ -313,9 +312,9 @@ footer a:link, a:visited {
   }
 
   .subscribe-newsletter {
-    margin-top: 120px;
-    padding: 2em;
     font-size: 20px;
+    padding: 2em;
+    margin-top: 120px;
   }
 
   .grid-container {
@@ -327,18 +326,26 @@ footer a:link, a:visited {
   }
 
   .hero img {
-    width: 40%;
+    width: 35%;
+  }
+
+  .hero .content {
+    padding: 2em;
   }
 
   .hero .content h1 {
-    font-size: 2em;
+    font-size: 1.75em;
   }
   
   .hero .content p {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 
   .articles {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .copyright p {
+    font-size: 18px;
   }
 }
