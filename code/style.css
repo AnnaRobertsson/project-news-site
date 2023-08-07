@@ -242,7 +242,7 @@ footer a:link, a:visited {
   }
 
   .menu li + li {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .dropdown {
@@ -299,7 +299,7 @@ footer a:link, a:visited {
   }
 
   .menu li + li {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .dropdown {
